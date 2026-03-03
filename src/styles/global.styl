@@ -38,7 +38,7 @@ body
 // ─── Selection ───────────────────────────────────────────────────────────────
 
 ::selection
-  background rgba(var(--accent-rgb), 0.3)
+  background unquote("rgba(var(--accent-rgb), 0.3)")
   color var(--text-primary)
 
 // ─── Focus ───────────────────────────────────────────────────────────────────
@@ -167,7 +167,7 @@ img
 
   &:hover
     transform translateY(-2px)
-    box-shadow 0 12px 40px rgba(var(--accent-rgb), 0.4)
+    box-shadow 0 12px 40px unquote("rgba(var(--accent-rgb), 0.4)")
 
   &:active
     transform translateY(0)
@@ -198,4 +198,4 @@ img
   transition all transition-base
 
   &:hover
-    background rgba(var(--accent-rgb), 0.2)
+    background unquote("rgba(var(--accent-rgb), 0.2)")

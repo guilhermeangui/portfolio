@@ -78,16 +78,6 @@ export default function Hero() {
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
-            <span className="hero__stat-value">3</span>
-            <span className="hero__stat-label">Companies</span>
-          </div>
-          <div className="hero__stat-divider" />
-          <div className="hero__stat">
-            <span className="hero__stat-value">1</span>
-            <span className="hero__stat-label">Design System led</span>
-          </div>
-          <div className="hero__stat-divider" />
-          <div className="hero__stat">
             <span className="hero__stat-value">∞</span>
             <span className="hero__stat-label">Components shipped</span>
           </div>

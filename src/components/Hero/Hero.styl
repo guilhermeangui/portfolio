@@ -1,25 +1,36 @@
 @import '../../styles/variables'
 
 @keyframes orb-1
-  0%, 100%  transform translate(0, 0) scale(1)
-  50%       transform translate(40px, -30px) scale(1.1)
+  0%, 100%
+    transform translate(0, 0) scale(1)
+  50%
+    transform translate(40px, -30px) scale(1.1)
 
 @keyframes orb-2
-  0%, 100%  transform translate(0, 0) scale(1)
-  50%       transform translate(-30px, 40px) scale(0.9)
+  0%, 100%
+    transform translate(0, 0) scale(1)
+  50%
+    transform translate(-30px, 40px) scale(0.9)
 
 @keyframes orb-3
-  0%, 100%  transform translate(0, 0) scale(1)
-  33%       transform translate(20px, 20px) scale(1.05)
-  66%       transform translate(-20px, -10px) scale(0.95)
+  0%, 100%
+    transform translate(0, 0) scale(1)
+  33%
+    transform translate(20px, 20px) scale(1.05)
+  66%
+    transform translate(-20px, -10px) scale(0.95)
 
 @keyframes blink
-  0%, 100%  opacity 1
-  50%       opacity 0
+  0%, 100%
+    opacity 1
+  50%
+    opacity 0
 
 @keyframes scroll-bounce
-  0%, 100%  transform translateX(-50%) translateY(0)
-  50%       transform translateX(-50%) translateY(8px)
+  0%, 100%
+    transform translateX(-50%) translateY(0)
+  50%
+    transform translateX(-50%) translateY(8px)
 
 @keyframes hero-in
   from
@@ -54,7 +65,7 @@
       height 600px
       top -10%
       left -5%
-      background radial-gradient(circle, rgba(var(--accent-rgb), 0.6) 0%, transparent 70%)
+      background unquote("radial-gradient(circle, rgba(var(--accent-rgb), 0.6) 0%, transparent 70%)")
       animation orb-1 12s ease-in-out infinite
 
     &--2
@@ -62,7 +73,7 @@
       height 500px
       bottom -15%
       right -5%
-      background radial-gradient(circle, rgba(var(--accent-2-rgb), 0.5) 0%, transparent 70%)
+      background unquote("radial-gradient(circle, rgba(var(--accent-2-rgb), 0.5) 0%, transparent 70%)")
       animation orb-2 15s ease-in-out infinite
 
     &--3
@@ -70,15 +81,13 @@
       height 400px
       top 40%
       left 55%
-      background radial-gradient(circle, rgba(var(--accent-rgb), 0.25) 0%, transparent 70%)
+      background unquote("radial-gradient(circle, rgba(var(--accent-rgb), 0.25) 0%, transparent 70%)")
       animation orb-3 18s ease-in-out infinite
 
   &__grid
     position absolute
     inset 0
-    background-image
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px)
+    background-image linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)
     background-size 60px 60px
     mask-image radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)
 
@@ -98,8 +107,8 @@
     letter-spacing 0.05em
     margin-bottom 1.5rem
     padding 0.4rem 0.9rem
-    background rgba(var(--accent-2-rgb), 0.08)
-    border 1px solid rgba(var(--accent-2-rgb), 0.2)
+    background unquote("rgba(var(--accent-2-rgb), 0.08)")
+    border 1px solid unquote("rgba(var(--accent-2-rgb), 0.2)")
     border-radius radius-full
     animation hero-in 0.6s ease both
     animation-delay 0.1s
@@ -109,7 +118,7 @@
     height 7px
     border-radius 50%
     background var(--accent-2)
-    box-shadow 0 0 8px rgba(var(--accent-2-rgb), 0.8)
+    box-shadow 0 0 8px unquote("rgba(var(--accent-2-rgb), 0.8)")
     flex-shrink 0
 
   &__name

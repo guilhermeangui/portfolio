@@ -6,7 +6,7 @@ const projects = [
   {
     name: 'Onze — Design System',
     description:
-      'Led the development and maintenance of the company's React component library. Standardized UI tokens, documentation, and patterns used across all product surfaces.',
+      "Led the development and maintenance of the company's React component library. Standardized UI tokens, documentation, and patterns used across all product surfaces.",
     tags: ['React', 'TypeScript', 'Stylus', 'Figma', 'Storybook'],
     color: '#0EA5E9',
     emoji: '🎨',
