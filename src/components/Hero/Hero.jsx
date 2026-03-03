@@ -48,22 +48,24 @@ export default function Hero() {
           <button className="btn btn-ghost" onClick={() => scrollTo('contact')}>
             {t.hero.getInTouch}
           </button>
-          <a
-            className="hero__social-icon"
-            href="https://linkedin.com/in/guilherme-anguiano"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <LinkedInIcon />
-          </a>
-          <a
-            className="hero__social-icon"
-            href="mailto:guilherme.anguiano@outlook.com"
-            aria-label="Email"
-          >
-            <EmailIcon />
-          </a>
+          <div className="hero__socials">
+            <a
+              className="hero__social-icon"
+              href="https://linkedin.com/in/guilherme-anguiano"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              className="hero__social-icon"
+              href="mailto:guilherme.anguiano@outlook.com"
+              aria-label="Email"
+            >
+              <EmailIcon />
+            </a>
+          </div>
         </div>
 
         <div className="hero__stats">
