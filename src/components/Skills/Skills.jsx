@@ -1,10 +1,10 @@
 import { useStaggerReveal } from '../../hooks/useScrollReveal'
+import { useLanguage } from '../../context/LanguageContext'
 import ScrollReveal from '../common/ScrollReveal'
 import './Skills.styl'
 
 const skillGroups = [
   {
-    category: 'Core',
     icon: '⚡',
     skills: [
       { name: 'React', level: 5 },
@@ -15,7 +15,6 @@ const skillGroups = [
     ],
   },
   {
-    category: 'Styling & Design',
     icon: '🎨',
     skills: [
       { name: 'Stylus', level: 5 },
@@ -27,7 +26,6 @@ const skillGroups = [
     ],
   },
   {
-    category: 'Tools & Practices',
     icon: '🛠',
     skills: [
       { name: 'Git / GitHub', level: 5 },
@@ -39,7 +37,6 @@ const skillGroups = [
     ],
   },
   {
-    category: 'Previous Stack',
     icon: '📦',
     skills: [
       { name: 'PHP', level: 3 },
@@ -63,20 +60,22 @@ function DotLevel({ level }) {
 
 export default function Skills() {
   const gridRef = useStaggerReveal(0.05)
+  const { t } = useLanguage()
+  const s = t.skills
+
+  const groups = skillGroups.map((g, i) => ({ ...g, category: s.categories[i] }))
 
   return (
     <section className="skills" id="skills">
       <div className="container">
         <ScrollReveal>
-          <p className="section-label">Stack</p>
-          <h2 className="section-title">Skills</h2>
-          <p className="section-subtitle">
-            Technologies I use daily and the ones I grew up with.
-          </p>
+          <p className="section-label">{s.label}</p>
+          <h2 className="section-title">{s.title}</h2>
+          <p className="section-subtitle">{s.subtitle}</p>
         </ScrollReveal>
 
         <div className="skills__grid" ref={gridRef}>
-          {skillGroups.map((group, i) => (
+          {groups.map((group, i) => (
             <div key={i} className="skills__card stagger-item">
               <div className="skills__card-header">
                 <span className="skills__icon">{group.icon}</span>

@@ -1,4 +1,5 @@
 import { ThemeProvider } from './context/ThemeContext'
+import { LanguageProvider } from './context/LanguageContext'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
@@ -9,6 +10,7 @@ import Contact from './components/Contact/Contact'
 
 export default function App() {
   return (
+    <LanguageProvider>
     <ThemeProvider>
       <div className="app">
         <Header />
@@ -22,5 +24,6 @@ export default function App() {
         </main>
       </div>
     </ThemeProvider>
+    </LanguageProvider>
   )
 }

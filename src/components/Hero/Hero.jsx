@@ -1,15 +1,10 @@
 import { useTypewriter } from '../../hooks/useTypewriter'
+import { useLanguage } from '../../context/LanguageContext'
 import './Hero.styl'
 
-const roles = [
-  'Senior Frontend Developer',
-  'Design System Lead',
-  'React Specialist',
-  'UI/UX Enthusiast',
-]
-
 export default function Hero() {
-  const typed = useTypewriter(roles, { typeSpeed: 75, deleteSpeed: 40, pauseTime: 2200 })
+  const { t } = useLanguage()
+  const typed = useTypewriter(t.hero.roles, { typeSpeed: 75, deleteSpeed: 40, pauseTime: 2200 })
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -27,7 +22,7 @@ export default function Hero() {
       <div className="container hero__content">
         <div className="hero__eyebrow">
           <span className="hero__dot" />
-          Available for remote opportunities
+          {t.hero.available}
         </div>
 
         <h1 className="hero__name">
@@ -41,17 +36,17 @@ export default function Hero() {
         </div>
 
         <p className="hero__description">
-          Building scalable web apps and design systems that ship with quality.
+          {t.hero.descriptionLine1}
           <br />
-          10+ years of frontend engineering — React, TypeScript, Stylus, fintech.
+          {t.hero.descriptionLine2}
         </p>
 
         <div className="hero__actions">
           <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
-            View projects
+            {t.hero.viewProjects}
           </button>
           <button className="btn btn-ghost" onClick={() => scrollTo('contact')}>
-            Get in touch
+            {t.hero.getInTouch}
           </button>
           <a
             className="hero__social-icon"
@@ -74,12 +69,12 @@ export default function Hero() {
         <div className="hero__stats">
           <div className="hero__stat">
             <span className="hero__stat-value">10+</span>
-            <span className="hero__stat-label">Years exp.</span>
+            <span className="hero__stat-label">{t.hero.yearsLabel}</span>
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
             <span className="hero__stat-value">∞</span>
-            <span className="hero__stat-label">Components shipped</span>
+            <span className="hero__stat-label">{t.hero.componentsLabel}</span>
           </div>
         </div>
       </div>
@@ -87,7 +82,7 @@ export default function Hero() {
       <button
         className="hero__scroll-indicator"
         onClick={() => scrollTo('about')}
-        aria-label="Scroll to about"
+        aria-label={t.hero.scrollLabel}
       >
         <span />
       </button>

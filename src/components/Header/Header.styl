@@ -98,6 +98,28 @@
     gap 0.5rem
     flex-shrink 0
 
+  &__lang-toggle
+    display flex
+    align-items center
+    justify-content center
+    height 28px
+    padding 0 0.6rem
+    border-radius radius-full
+    border 1.5px solid var(--border)
+    background transparent
+    color var(--text-secondary)
+    font-size 0.7rem
+    font-weight 600
+    font-family font-mono
+    letter-spacing 0.05em
+    cursor pointer
+    transition all transition-base
+
+    &:hover
+      border-color var(--accent)
+      background var(--accent-glow)
+      color var(--accent)
+
   &__theme-toggle
     display flex
     align-items center

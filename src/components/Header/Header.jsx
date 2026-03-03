@@ -1,17 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../../context/ThemeContext'
+import { useLanguage } from '../../context/LanguageContext'
 import './Header.styl'
-
-const navLinks = [
-  { href: '#about',      label: 'About'      },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects',   label: 'Projects'   },
-  { href: '#skills',     label: 'Skills'     },
-  { href: '#contact',    label: 'Contact'    },
-]
 
 export default function Header() {
   const { theme, toggle } = useTheme()
+  const { lang, toggleLang, t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -38,26 +32,34 @@ export default function Header() {
         </a>
 
         <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
-          {navLinks.map(({ href, label }) => (
+          {t.header.nav.map(({ href, label }) => (
             <a key={href} href={href} className="header__nav-link" onClick={handleNav}>
               {label}
             </a>
           ))}
           <a
-            href="/Guilherme_Anguiano_Resume_EN.pdf"
+            href={t.header.resumeFile}
             className="btn btn-primary header__cta"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Résumé ↗
+            {t.header.resume}
           </a>
         </nav>
 
         <div className="header__actions">
           <button
+            className="header__lang-toggle"
+            onClick={toggleLang}
+            aria-label="Toggle language"
+          >
+            {lang === 'en-US' ? 'EN' : 'PT'}
+          </button>
+
+          <button
             className="header__theme-toggle"
             onClick={toggle}
-            aria-label="Toggle theme"
+            aria-label={t.header.toggleTheme}
           >
             {theme === 'dark' ? '☀' : '◑'}
           </button>
@@ -65,7 +67,7 @@ export default function Header() {
           <button
             className={`header__burger ${menuOpen ? 'header__burger--open' : ''}`}
             onClick={() => setMenuOpen(o => !o)}
-            aria-label="Toggle menu"
+            aria-label={t.header.toggleMenu}
           >
             <span />
             <span />

@@ -1,3 +1,4 @@
+import { useLanguage } from '../../context/LanguageContext'
 import ScrollReveal from '../common/ScrollReveal'
 import { useStaggerReveal } from '../../hooks/useScrollReveal'
 import './Contact.styl'
@@ -25,21 +26,19 @@ const links = [
 
 export default function Contact() {
   const linksRef = useStaggerReveal(0.1)
+  const { t } = useLanguage()
+  const c = t.contact
 
   return (
     <section className="contact" id="contact">
       <div className="container">
         <ScrollReveal>
-          <p className="section-label">Let's talk</p>
+          <p className="section-label">{c.label}</p>
           <h2 className="contact__title">
-            Open to great
-            <span className="contact__title-accent"> opportunities</span>
+            {c.title}
+            <span className="contact__title-accent">{c.titleAccent}</span>
           </h2>
-          <p className="contact__subtitle">
-            I'm looking for remote roles in Brazil or the US, and hybrid positions
-            in São Paulo (up to 2 days/week). If you're building something interesting,
-            let's connect.
-          </p>
+          <p className="contact__subtitle">{c.subtitle}</p>
         </ScrollReveal>
 
         <div className="contact__links" ref={linksRef}>
@@ -63,9 +62,7 @@ export default function Contact() {
 
         <ScrollReveal delay={400}>
           <div className="contact__footer">
-            <p>
-              Built with React + Stylus · Santos, SP · {new Date().getFullYear()}
-            </p>
+            <p>{c.footer} {new Date().getFullYear()}</p>
             <p className="contact__footer-name">Guilherme Anguiano</p>
           </div>
         </ScrollReveal>
