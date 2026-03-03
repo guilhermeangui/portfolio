@@ -14,7 +14,7 @@ export function useScrollReveal(options = {}) {
           observer.unobserve(el)
         }
       },
-      { threshold: options.threshold || 0.05, ...options }
+      { threshold: options.threshold || 0.05, rootMargin: '0px 0px 80px 0px', ...options }
     )
 
     observer.observe(el)
@@ -41,7 +41,7 @@ export function useStaggerReveal(threshold = 0.1) {
           observer.unobserve(container)
         }
       },
-      { threshold }
+      { threshold, rootMargin: '0px 0px 80px 0px' }
     )
 
     observer.observe(container)
