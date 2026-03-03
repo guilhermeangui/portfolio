@@ -1,0 +1,125 @@
+@import '../../styles/variables'
+
+.contact
+  padding section-padding
+  position relative
+  overflow hidden
+
+  &::before
+    content ''
+    position absolute
+    bottom -200px
+    left 50%
+    transform translateX(-50%)
+    width 800px
+    height 500px
+    background radial-gradient(ellipse, rgba(var(--accent-rgb), 0.1) 0%, transparent 70%)
+    pointer-events none
+
+  &__title
+    font-size clamp(2.25rem, 5vw, 3.5rem)
+    font-weight 800
+    letter-spacing -0.04em
+    line-height 1.1
+    color var(--text-primary)
+    margin-bottom 1.25rem
+    max-width 600px
+
+  &__title-accent
+    background linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%)
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+    background-clip text
+
+  &__subtitle
+    font-size 1.05rem
+    color var(--text-secondary)
+    line-height 1.75
+    max-width 520px
+    margin-bottom 3rem
+
+  &__links
+    display flex
+    flex-direction column
+    gap 0.875rem
+    max-width 600px
+    margin-bottom 4rem
+
+  &__link
+    display flex
+    align-items center
+    gap 1.25rem
+    padding 1.25rem 1.5rem
+    background var(--bg-card)
+    border 1px solid var(--border)
+    border-radius radius-lg
+    text-decoration none
+    color inherit
+    transition all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    group &
+
+    &:hover
+      border-color var(--border-accent)
+      transform translateX(6px)
+      box-shadow var(--shadow-accent)
+      background var(--bg-card-hover)
+
+      .contact__link-arrow
+        transform translateX(4px)
+        color var(--accent)
+
+  &__link-icon
+    display flex
+    align-items center
+    justify-content center
+    width 44px
+    height 44px
+    border-radius radius-md
+    background var(--accent-glow)
+    border 1px solid var(--border-accent)
+    color var(--accent)
+    font-size 1rem
+    font-weight 700
+    font-family font-mono
+    flex-shrink 0
+
+  &__link-body
+    display flex
+    flex-direction column
+    gap 0.1rem
+    flex 1
+
+  &__link-label
+    font-size 0.75rem
+    font-weight 600
+    text-transform uppercase
+    letter-spacing 0.1em
+    color var(--text-muted)
+
+  &__link-value
+    font-size 0.9rem
+    font-weight 500
+    color var(--text-primary)
+
+  &__link-arrow
+    font-size 1.1rem
+    color var(--text-muted)
+    transition all transition-base
+
+  &__footer
+    border-top 1px solid var(--border)
+    padding-top 2rem
+    display flex
+    align-items center
+    justify-content space-between
+    flex-wrap wrap
+    gap 0.5rem
+
+    p
+      font-size 0.8rem
+      color var(--text-muted)
+      font-family font-mono
+
+  &__footer-name
+    font-weight 600
+    color var(--text-secondary) !important

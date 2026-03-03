@@ -1,0 +1,76 @@
+@import '../../styles/variables'
+
+.skills
+  padding section-padding
+
+  &__grid
+    display grid
+    grid-template-columns repeat(2, 1fr)
+    gap 1.25rem
+    margin-top 3.5rem
+
+    @media (max-width breakpoint-md)
+      grid-template-columns 1fr
+
+  &__card
+    background var(--bg-card)
+    border 1px solid var(--border)
+    border-radius radius-lg
+    padding 1.75rem
+    transition all transition-base
+
+    &:hover
+      border-color var(--border-accent)
+      box-shadow var(--shadow-accent)
+
+  &__card-header
+    display flex
+    align-items center
+    gap 0.75rem
+    margin-bottom 1.5rem
+
+  &__icon
+    font-size 1.5rem
+    line-height 1
+
+  &__category
+    font-size 0.85rem
+    font-weight 700
+    text-transform uppercase
+    letter-spacing 0.1em
+    color var(--text-secondary)
+
+  &__list
+    display flex
+    flex-direction column
+    gap 0.75rem
+
+.skill
+  &__item
+    display flex
+    align-items center
+    justify-content space-between
+    gap 1rem
+
+  &__name
+    font-size 0.9rem
+    color var(--text-primary)
+    font-weight 500
+
+  &__dots
+    display flex
+    gap 4px
+    flex-shrink 0
+
+  &__dot
+    width 7px
+    height 7px
+    border-radius 50%
+    border 1.5px solid var(--border)
+    background transparent
+    transition all transition-base
+
+    &--filled
+      background var(--accent)
+      border-color var(--accent)
+      box-shadow 0 0 6px rgba(var(--accent-rgb), 0.5)
