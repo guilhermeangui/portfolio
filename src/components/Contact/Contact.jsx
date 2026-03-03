@@ -19,8 +19,8 @@ const links = [
   {
     icon: '⬡',
     label: 'GitHub',
-    value: 'github.com/guilherme-anguiano',
-    href: 'https://github.com/guilherme-anguiano',
+    value: 'github.com/guilhermeangui',
+    href: 'https://github.com/guilhermeangui',
   },
 ]
 
