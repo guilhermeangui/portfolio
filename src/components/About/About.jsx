@@ -20,35 +20,23 @@ export default function About() {
           </div>
         </ScrollReveal>
 
-        <div className="about__text-col">
-          <ScrollReveal>
-            <p className="section-label">{a.label}</p>
-            <h2 className="section-title">
-              {a.titleLine1}<br />
-              <span className="about__title-accent">{a.titleAccent}</span>
-            </h2>
-          </ScrollReveal>
+        <ScrollReveal className="about__text-col">
+          <p className="section-label">{a.label}</p>
+          <h2 className="section-title">
+            {a.titleLine1}<br />
+            <span className="about__title-accent">{a.titleAccent}</span>
+          </h2>
 
-          <ScrollReveal delay={100}>
-            <p className="about__body">{a.body1}</p>
-          </ScrollReveal>
+          <p className="about__body">{a.body1}</p>
+          <p className="about__body" dangerouslySetInnerHTML={{ __html: a.body2 }} />
+          <p className="about__body">{a.body3}</p>
 
-          <ScrollReveal delay={200}>
-            <p className="about__body" dangerouslySetInnerHTML={{ __html: a.body2 }} />
-          </ScrollReveal>
-
-          <ScrollReveal delay={300}>
-            <p className="about__body">{a.body3}</p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={400}>
-            <div className="about__interests">
-              {a.tags.map(tag => (
-                <span key={tag} className="tag">{tag}</span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
+          <div className="about__interests">
+            {a.tags.map(tag => (
+              <span key={tag} className="tag">{tag}</span>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
