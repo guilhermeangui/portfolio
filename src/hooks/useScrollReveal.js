@@ -14,7 +14,7 @@ export function useScrollReveal(options = {}) {
           observer.unobserve(el)
         }
       },
-      { threshold: options.threshold || 0.15, ...options }
+      { threshold: options.threshold || 0.05, ...options }
     )
 
     observer.observe(el)
