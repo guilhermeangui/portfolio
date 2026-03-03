@@ -48,6 +48,17 @@
   overflow hidden
   padding 7rem 0 5rem
 
+  &::after
+    content ''
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    height 180px
+    background linear-gradient(to bottom, transparent, var(--bg-primary))
+    pointer-events none
+    z-index 2
+
   &__bg
     position absolute
     inset 0
@@ -94,6 +105,7 @@
   &__content
     position relative
     z-index 1
+    width 100%
     max-width 780px
 
   &__eyebrow
@@ -124,7 +136,7 @@
   &__name
     font-size clamp(3rem, 8vw, 5.5rem)
     font-weight 800
-    line-height 1.0
+    line-height 1.2
     letter-spacing -0.04em
     color var(--text-primary)
     margin-bottom 0.5rem
@@ -133,6 +145,8 @@
 
   &__name-last
     display inline-block
+    padding 0 0.06em
+    margin 0 -0.06em
     background linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%)
     -webkit-background-clip text
     -webkit-text-fill-color transparent
