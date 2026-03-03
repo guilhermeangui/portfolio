@@ -19,10 +19,9 @@ const skillGroups = [
     skills: [
       { name: 'Stylus', level: 5 },
       { name: 'Sass / SCSS', level: 5 },
-      { name: 'Styled Components', level: 4 },
       { name: 'Design Systems', level: 5 },
       { name: 'Figma', level: 4 },
-      { name: 'UX / UI', level: 4 },
+      { name: 'UX / UI', level: 5 },
     ],
   },
   {
@@ -30,19 +29,18 @@ const skillGroups = [
     skills: [
       { name: 'Git / GitHub', level: 5 },
       { name: 'REST APIs', level: 4 },
-      { name: 'Node.js', level: 3 },
+      { name: 'Node.js', level: 4 },
       { name: 'Webpack / Vite', level: 4 },
       { name: 'Agile / Scrum', level: 4 },
-      { name: 'Accessibility (a11y)', level: 4 },
     ],
   },
   {
     icon: '📦',
     skills: [
-      { name: 'PHP', level: 3 },
+      { name: 'PHP', level: 4 },
       { name: 'AngularJS / Angular', level: 3 },
-      { name: 'jQuery', level: 3 },
-      { name: 'SQL Server', level: 2 },
+      { name: 'jQuery', level: 4 },
+      { name: 'SQL Server', level: 3 },
       { name: 'Bootstrap', level: 3 },
     ],
   },
