@@ -16,7 +16,7 @@ export const translations = {
     hero: {
       available: 'Available for remote opportunities',
       roles: [
-        'Senior Frontend Developer',
+        'Senior Frontend Engineer',
         'Design System Lead',
         'React Specialist',
         'UI/UX Enthusiast',
@@ -33,7 +33,7 @@ export const translations = {
       label: 'About me',
       titleLine1: 'I build things that',
       titleAccent: 'actually matter',
-      body1: "I'm a Senior Frontend Developer based in Santos, Brazil, with over 10 years of experience turning complex requirements into clean, performant interfaces. My sweet spot is React — I think in components, care deeply about UX, and believe a well-built Design System is one of the highest-leverage investments a product team can make.",
+      body1: "I'm a Senior Frontend Engineer based in Santos, Brazil, with over 10 years of experience turning complex requirements into clean, performant interfaces. My sweet spot is React — I think in components, care deeply about UX, and believe a well-built Design System is one of the highest-leverage investments a product team can make.",
       body2: "Most recently at <strong>Onze</strong>, I led the Design System and maintained a private pension app serving thousands of users in the fintech space. Before that, I sharpened my skills at <strong>Red Ventures</strong>, a digital performance powerhouse where I learned what building at scale really means.",
       body3: "I'm currently open to remote opportunities — both in Brazil and the US — and available for hybrid roles in São Paulo (up to 2 days/week).",
       tags: ['⚡ React', '🎨 Design Systems', '🔷 TypeScript', '🌎 Remote-first', '🤝 Cross-functional', '♿ Accessibility'],
@@ -146,7 +146,7 @@ export const translations = {
     hero: {
       available: 'Disponível para oportunidades remotas',
       roles: [
-        'Desenvolvedor Frontend Sênior',
+        'Engenheiro Frontend Sênior',
         'Líder de Design System',
         'Especialista em React',
         'Entusiasta de UI/UX',
@@ -163,7 +163,7 @@ export const translations = {
       label: 'Sobre mim',
       titleLine1: 'Construo coisas que',
       titleAccent: 'realmente importam',
-      body1: "Sou Desenvolvedor Frontend Sênior baseado em Santos, Brasil, com mais de 10 anos de experiência transformando requisitos complexos em interfaces limpas e performáticas. Meu ponto forte é React — penso em componentes, me importo profundamente com UX, e acredito que um Design System bem construído é um dos investimentos de maior impacto que um time de produto pode fazer.",
+      body1: "Sou um Engenheiro Frontend Sênior localizado em Santos, Brasil, com mais de 10 anos de experiência transformando requisitos complexos em interfaces limpas e performáticas. Meu ponto forte é React — penso em componentes, me importo profundamente com UX, e acredito que um Design System bem construído é um dos investimentos de maior impacto que um time de produto pode fazer.",
       body2: "Mais recentemente na <strong>Onze</strong>, liderei o Design System e mantive um aplicativo de previdência privada que serve milhares de usuários no setor de fintech. Antes disso, aprimorei minhas habilidades na <strong>Red Ventures</strong>, uma empresa de performance digital onde aprendi o que significa construir em escala.",
       body3: "Atualmente estou aberto a oportunidades remotas — tanto no Brasil quanto nos EUA — e disponível para posições híbridas em São Paulo (até 2 dias/semana).",
       tags: ['⚡ React', '🎨 Design Systems', '🔷 TypeScript', '🌎 Remoto', '🤝 Multidisciplinar', '♿ Acessibilidade'],
